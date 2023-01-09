@@ -1,2 +1,1 @@
-# ProjetoRecycle
 # ProjectRecycle
