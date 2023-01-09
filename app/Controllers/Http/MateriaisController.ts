@@ -1,5 +1,6 @@
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import Material from 'App/Models/Material'
+import Ponto from 'App/Models/Ponto'
 export default class MateriaisController {
    
     public async index({ response }:HttpContextContract) {
@@ -9,8 +10,13 @@ export default class MateriaisController {
     }
 
 
-    public async store({request, response}:HttpContextContract) {
+    public async store({request, response, params}:HttpContextContract) {
         const body = request.body()
+        // const pontoId = params.id
+
+        // await Ponto.findOrFail(pontoId)
+
+        // body.ponto_id = pontoId
 
         const materiais = await Material.create(body)
 

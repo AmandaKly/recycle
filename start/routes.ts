@@ -78,6 +78,8 @@ Route.group(() => {
         Route.get('/:id', 'MateriaisController.show')
            .where('id', /^[0-9]+$/)
            .as('materiais.show')
+           Route.post('/', 'MateriaisController.store')
+           .as('materiais.store')
         Route.delete('/:id', 'MateriaisController.destroy')
            .where('id', /^[0-9]+$/)
            .as('materiais.destroy')
