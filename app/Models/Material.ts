@@ -11,6 +11,7 @@ export default class Material extends BaseModel {
   @column({ isPrimary: true })
   public id: number
 
+  
   @column()
   public tipo_material: string
 
