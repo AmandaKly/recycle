@@ -67,9 +67,9 @@ Route.group(() => {
         .where('id', /^[0-9]+$/)
         .as('pontos.update')
 
-    // Route.post('/:id/materiais', 'MateriaisController.store')
-    //     .where('id', /^[0-9]+$/)
-    //     .as('materiais.store')
+    Route.post('/:id/materiais', 'MateriaisController.store')
+        .where('id', /^[0-9]+$/)
+        .as('materiais.store')
     }).prefix('/pontos')
 
     Route.group(() =>{
@@ -78,8 +78,8 @@ Route.group(() => {
         Route.get('/:id', 'MateriaisController.show')
            .where('id', /^[0-9]+$/)
            .as('materiais.show')
-           Route.post('/', 'MateriaisController.store')
-           .as('materiais.store')
+        //    Route.post('/', 'MateriaisController.store')
+        //    .as('materiais.store')
         Route.delete('/:id', 'MateriaisController.destroy')
            .where('id', /^[0-9]+$/)
            .as('materiais.destroy')

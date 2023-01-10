@@ -15,8 +15,6 @@ export default class Ponto extends BaseModel {
   @column({ isPrimary: true })
   public id: number
 
-  @manyToMany(() => Material)
-  public materiais: ManyToMany<typeof Material>
 
   @column()
   public userId: number
@@ -47,6 +45,9 @@ export default class Ponto extends BaseModel {
   
   // @column()
   // public coordenada: number
+
+  @manyToMany(() => Material)
+  public materiais: ManyToMany<typeof Material>
 
 
   @column.dateTime({ autoCreate: true })

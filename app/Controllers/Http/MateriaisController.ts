@@ -12,11 +12,9 @@ export default class MateriaisController {
 
     public async store({request, response, params}:HttpContextContract) {
         const body = request.body()
-        // const pontoId = params.id
+        const pontoId = params.id
 
-        // await Ponto.findOrFail(pontoId)
-
-        // body.ponto_id = pontoId
+        await Ponto.findOrFail(pontoId)
 
         const materiais = await Material.create(body)
 

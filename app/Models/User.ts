@@ -12,7 +12,6 @@ import Hash from '@ioc:Adonis/Core/Hash'
 
 export default class User extends BaseModel {
 
-
   @column({ isPrimary: true })
   public id: number
 
@@ -27,12 +26,12 @@ export default class User extends BaseModel {
 
   @column({ serializeAs: null })
   public senha: string
-
+  
   @column()
   public CNPJ: string
 
   @column()
-  public tipo_empresa: string
+  public tipo_empresa: 'empresa'| 'coleta_seletiva'
 
   @column()
   public email: string

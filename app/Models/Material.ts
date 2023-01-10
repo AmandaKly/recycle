@@ -16,7 +16,7 @@ export default class Material extends BaseModel {
 
   @column()
   public descricao_material: string
-
+  
   @manyToMany(() => Ponto)
   public pontos: ManyToMany<typeof Ponto>
 
