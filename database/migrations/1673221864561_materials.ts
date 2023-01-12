@@ -8,7 +8,6 @@ export default class extends BaseSchema {
       table.increments('id')
 
       table.string('tipo_material', 20).notNullable()
-      table.string('descricao_material', 200).notNullable()
 
       /**
        * Uses timestamptz for PostgreSQL and DATETIME2 for MSSQL

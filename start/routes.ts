@@ -73,6 +73,7 @@ Route.group(() => {
     }).prefix('/pontos')
 
     Route.group(() =>{
+        Route.get('/lista', 'MateriaisController.listMateriais')
         Route.get('/', 'MateriaisController.index')
            .as('materiais.index')
         Route.get('/:id', 'MateriaisController.show')

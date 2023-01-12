@@ -1,22 +1,29 @@
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import Material from 'App/Models/Material'
 import Ponto from 'App/Models/Ponto'
+
 export default class MateriaisController {
    
     public async index({ response }:HttpContextContract) {
         const materiais = await Material.query()
+        // const resultado = await Material.query().select('id, nome').where('nome', 'like', "USUARIO_DIGITOU%")
 
         return response.ok(materiais)
     }
 
 
     public async store({request, response, params}:HttpContextContract) {
+ 
         const body = request.body()
         const pontoId = params.id
 
-        await Ponto.findOrFail(pontoId)
-
+        const ponto = await Ponto.findOrFail(pontoId)
+        
         const materiais = await Material.create(body)
+// colocar isso aqui em pontos
+        if (ponto){
+            materiais.related('pontos').attach([pontoId])
+        }
 
         response.status(201)
 
@@ -35,4 +42,6 @@ export default class MateriaisController {
             return response.badRequest(e)
         }
     }
+
+   
 }

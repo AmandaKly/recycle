@@ -18,7 +18,7 @@ export default class extends BaseSchema {
       table.string('endereco_ponto', 500).notNullable()
       table.string('dia_semana', 100)
       table.string('horario', 40)
-      table.string('descricao_ponto', 400)
+      table.string('descricao', 400)
 
       
       

@@ -10,14 +10,11 @@ import Ponto from 'App/Models/Ponto'
 export default class Material extends BaseModel {
   @column({ isPrimary: true })
   public id: number
-
   
   @column()
   public tipo_material: string
 
-  @column()
-  public descricao_material: string
-  
+ 
   @manyToMany(() => Ponto)
   public pontos: ManyToMany<typeof Ponto>
 

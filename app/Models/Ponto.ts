@@ -38,7 +38,7 @@ export default class Ponto extends BaseModel {
   public horario: string
 
   @column()
-  public descricao_ponto: string
+  public descricao: string
 
   // @column()
   // public link: string
@@ -48,7 +48,6 @@ export default class Ponto extends BaseModel {
 
   @manyToMany(() => Material)
   public materiais: ManyToMany<typeof Material>
-
 
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime

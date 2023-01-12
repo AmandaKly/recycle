@@ -1,10 +1,9 @@
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import User from 'App/Models/User'
-
 export default class UsersController {
     async index ({ response }: HttpContextContract) {
-        const usuarios = await User.query().preload('pontos')
-            .orderBy('created_at', 'desc')
+        const usuarios = await User.query().preload('pontos', (pontosQuery) => {pontosQuery.preload('materiais')})
+        .orderBy('created_at', 'desc')
             
 
             const r = usuarios.map(u => u.serialize({
