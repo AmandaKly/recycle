@@ -6,7 +6,7 @@ export default class MateriaisController {
    
     public async index({ response }:HttpContextContract) {
         const materiais = await Material.query()
-
+        
         return response.ok(materiais)
     }
 
