@@ -19,12 +19,13 @@ export default class PontosController {
     }
 
 
-    async store({request, params, response}:HttpContextContract) {
+    async store({request, params, response, auth}:HttpContextContract) {
+        if (auth.use('api').user != null){
         const body = request.body()
         const userId = params.id
 
         await User.findOrFail(userId)
-
+        try {
         body.user_id = userId
 
         const ponto = await Ponto.create(body)
@@ -35,10 +36,16 @@ export default class PontosController {
             message: "Ponto adicionado com sucesso",
             data: ponto,
         }
+
+        } catch (e) {
+            return response.badRequest(e)
+        } 
+    } else return response.unauthorized('Usuário não está autorizado.')
     }
 
    
-    async destroy ({ params, response }: HttpContextContract) {
+    async destroy ({ params, response, auth }: HttpContextContract) {
+        if (auth.use('api').user != null){
         const pontos = await Ponto.findOrFail(params.id)
         try {
             await pontos.delete()
@@ -46,10 +53,12 @@ export default class PontosController {
         } catch (e) {
             return response.badRequest(e)
         }
+    } else return response.unauthorized('Usuário não está autorizado.')
     }
 
-    async update ({ params, request, response }: HttpContextContract) {
-        const pontos = await Ponto.findOrFail(params.id)
+    async update ({ params, request, response, auth }: HttpContextContract) {
+        if (auth.use('api').user != null)
+        {const pontos = await Ponto.findOrFail(params.id)
         pontos.merge(request.only(['nome','endereco_ponto','cep','dia_semana','horario','descricao_ponto']))
         try {
             await pontos.save()
@@ -57,6 +66,7 @@ export default class PontosController {
         } catch (e) {
             return response.badRequest(e)
         }
+    }
     }
 
 

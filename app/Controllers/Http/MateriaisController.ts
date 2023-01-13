@@ -6,18 +6,17 @@ export default class MateriaisController {
    
     public async index({ response }:HttpContextContract) {
         const materiais = await Material.query()
-        // const resultado = await Material.query().select('id, nome').where('nome', 'like', "USUARIO_DIGITOU%")
 
         return response.ok(materiais)
     }
 
-
-    public async store({request, response, params}:HttpContextContract) {
- 
+    public async store({request, response, params, auth}:HttpContextContract) {
+        if (auth.use('api').user != null){
         const body = request.body()
         const pontoId = params.id
 
         const ponto = await Ponto.findOrFail(pontoId)
+        try {
         
         const materiais = await Material.create(body)
 // colocar isso aqui em pontos
@@ -31,9 +30,14 @@ export default class MateriaisController {
             message: "Material adicionado com sucesso",
             data: materiais,
         }
+        } catch (e) {
+            return response.badRequest(e)
+        } 
+    }   else return response.unauthorized('Usuário não está autorizado.')
     }
 
-    public async destroy({params, response}:HttpContextContract) {
+    public async destroy({params, response, auth}:HttpContextContract) {
+        if (auth.use('api').user != null){
         const materiais = await Material.findOrFail(params.id)
         try {
             await materiais.delete()
@@ -41,6 +45,7 @@ export default class MateriaisController {
         } catch (e) {
             return response.badRequest(e)
         }
+    }   else return response.unauthorized('Usuário não está autorizado.')
     }
 
    

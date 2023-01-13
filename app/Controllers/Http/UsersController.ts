@@ -21,28 +21,33 @@ export default class UsersController {
      */
     async show({response, params}: HttpContextContract) {
         const usuarios = await User.findOrFail(params.id)
-
+        try {
         await usuarios.load('pontos')
 
-        return response.ok(usuarios)
+        return response.ok(usuarios)}
+        catch (e) {
+            return response.badRequest(e)
+        } 
     }
 
 
-    async destroy ({ params, response }: HttpContextContract) {
-        const usuario = await User.findOrFail(params.id)
+    async destroy ({ params, response, auth }: HttpContextContract) {
+        if (auth.use('api').user != null)
+        {const usuario = await User.findOrFail(params.id)
         try {
             await usuario.delete()
             return response.ok(usuario)
         } catch (e) {
             return response.badRequest(e)
-        }
+        } 
+    } else return response.unauthorized('Usuário não está autorizado.')
     }
 
     /**
      * Método que armazena os dados do formulário de cadastro
      * @param param0 
      */
-    async store ({ request, response }: HttpContextContract) {
+    async store ({ request, response,}: HttpContextContract) {
         const dados = request.only(['nome','login','senha','CNPJ','tipo_empresa','email','telefone'])
         try {
             // console.log(dados)
@@ -52,7 +57,6 @@ export default class UsersController {
 
         } catch (e) {
             return response.badRequest(e)
-        
         }
     }
 
@@ -61,7 +65,9 @@ export default class UsersController {
      * @param param0 
      * alterado de 'nome','login','tipoEmpresa'
      */
-    async update ({ params, request, response }: HttpContextContract) {
+    async update ({ params, request, response, auth }: HttpContextContract) {
+        if (auth.use('api').user != null)
+        {
         const usuario = await User.findOrFail(params.id)
         usuario.merge(request.only(['email','telefone']))
         if (request.input('senha')) {
@@ -72,6 +78,6 @@ export default class UsersController {
             return response.ok(usuario)
         } catch (e) {
             return response.badRequest(e)
-        }
+        }} else return response.unauthorized('Usuário não está autorizado.')
     }
 }

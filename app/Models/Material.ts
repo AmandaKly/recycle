@@ -8,6 +8,7 @@ import {
 import Ponto from 'App/Models/Ponto'
 
 export default class Material extends BaseModel {
+ 
   @column({ isPrimary: true })
   public id: number
   

@@ -28,21 +28,23 @@ Route.group(() => {
     Route.get('/', 'UsersController.index')
         .as('usuarios.index')
 
-    Route.get('/:id', 'UsersController.show')
-        .where('id', /^[0-9]+$/)
-        .as('usuarios.show')
+    // Route.get('/:id', 'UsersController.show')
+    //     .where('id', /^[0-9]+$/)
+    //     .as('usuarios.show')
     Route.post('/', 'UsersController.store')
         .as('usuarios.store')
+
     Route.patch('/:id', 'UsersController.update')
         .where('id', /^[0-9]+$/)
-        .as('usuarios.update')
-    Route.delete('/:id', 'UsersController.destroy')
+        .as('usuarios.update').middleware('auth')
+    
+        Route.delete('/:id', 'UsersController.destroy')
         .where('id', /^[0-9]+$/)
-        .as('usuarios.destroy')
+        .as('usuarios.destroy').middleware('auth')
 
     Route.post('/:id/pontos', 'PontosController.store')
         .where('id', /^[0-9]+$/)
-        .as('pontos.store')
+        .as('pontos.store').middleware('auth')
         
     }).prefix('/usuario')
 
@@ -62,31 +64,33 @@ Route.group(() => {
        .as('pontos.show')
     Route.delete('/:id', 'PontosController.destroy')
        .where('id', /^[0-9]+$/)
-       .as('pontos.destroy')
+       .as('pontos.destroy').middleware('auth')
     Route.patch('/:id', 'PontosController.update')
         .where('id', /^[0-9]+$/)
-        .as('pontos.update')
+        .as('pontos.update').middleware('auth')
 
     Route.post('/:id/materiais', 'MateriaisController.store')
         .where('id', /^[0-9]+$/)
-        .as('materiais.store')
+        .as('materiais.store').middleware('auth')
     }).prefix('/pontos')
 
     Route.group(() =>{
         Route.get('/lista', 'MateriaisController.listMateriais')
         Route.get('/', 'MateriaisController.index')
            .as('materiais.index')
-        Route.get('/:id', 'MateriaisController.show')
-           .where('id', /^[0-9]+$/)
-           .as('materiais.show')
+
+        // Route.get('/:id', 'MateriaisController.show')
+        //    .where('id', /^[0-9]+$/)
+        //    .as('materiais.show')
+
         //    Route.post('/', 'MateriaisController.store')
         //    .as('materiais.store')
         Route.delete('/:id', 'MateriaisController.destroy')
            .where('id', /^[0-9]+$/)
-           .as('materiais.destroy')
+           .as('materiais.destroy').middleware('auth')
         Route.patch('/:id', 'MateriaisController.update')
             .where('id', /^[0-9]+$/)
-            .as('materiais.update')
+            .as('materiais.update').middleware('auth')
         }).prefix('/materiais')
 
 }).prefix('/api')
@@ -94,8 +98,9 @@ Route.group(() => {
 
 
 
-
-// }).prefix('/postagem')
-//     .middleware('auth')
-//     .where('id', /^[0-9]+$/)
-//     .where('idComment', /^[0-9]+$/)
+Route.group(() =>{
+    
+}).prefix('/postagem')
+    .middleware('auth')
+    .where('id', /^[0-9]+$/)
+    .where('idComment', /^[0-9]+$/)

@@ -11,20 +11,20 @@
         
         
         // async store({request, response, auth}:HttpContextContract) {
-        //         if (auth.use('api').user != null) {
-        //             try {
-        //                 const data = {
-        //                     user_id: auth.use('api').user?.id,
-        //                     post: request.input('post')
-        //                 }
-        //                 const point = await Ponto.create(data)
-        //                 return response.created(point)
-        //             } catch (e) {
-        //                 //mensagem de erro para o usuário
-        //                 return response.badRequest(e)
-        //             }
-        //         } else return response.unauthorized('tá fazendo o quê aqui?')
-        //         }        
+                // if (auth.use('api').user != null) {
+                //     try {
+                //         const data = {
+                //             user_id: auth.use('api').user?.id,
+                //             post: request.input('post')
+                //         }
+                //         const point = await Ponto.create(data)
+                //         return response.created(point)
+                //     } catch (e) {
+                //         //mensagem de erro para o usuário
+                //         return response.badRequest(e)
+                //     }
+                // } else return response.unauthorized('tá fazendo o quê aqui?')
+                // }        
         
         
         //     async delete({response, params}:HttpContextContract) {
