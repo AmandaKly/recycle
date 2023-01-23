@@ -75,16 +75,8 @@ Route.group(() => {
     }).prefix('/pontos')
 
     Route.group(() =>{
-        Route.get('/lista', 'MateriaisController.listMateriais')
         Route.get('/', 'MateriaisController.index')
-           .as('materiais.index')
-
-        // Route.get('/:id', 'MateriaisController.show')
-        //    .where('id', /^[0-9]+$/)
-        //    .as('materiais.show')
-
-        //    Route.post('/', 'MateriaisController.store')
-        //    .as('materiais.store')
+        Route.post('/listar', 'MateriaisController.findbycategoria')
         Route.delete('/:id', 'MateriaisController.destroy')
            .where('id', /^[0-9]+$/)
            .as('materiais.destroy').middleware('auth')

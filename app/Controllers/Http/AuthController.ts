@@ -16,7 +16,7 @@ export default class AuthController {
         }
     }
 
-    async logout ({ auth, response }: HttpContextContract) {
+    async logout ({ auth}: HttpContextContract) {
         await auth.use('api').revoke()
         return {
           revoked: true

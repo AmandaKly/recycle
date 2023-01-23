@@ -4,7 +4,6 @@ export default class UsersController {
     async index ({ response }: HttpContextContract) {
         const usuarios = await User.query().preload('pontos', (pontosQuery) => {pontosQuery.preload('materiais')})
         .orderBy('created_at', 'desc')
-            
 
             const r = usuarios.map(u => u.serialize({
                 fields: {
@@ -48,11 +47,10 @@ export default class UsersController {
      * @param param0 
      */
     async store ({ request, response,}: HttpContextContract) {
-        const dados = request.only(['nome','login','senha','CNPJ','tipo_empresa','email','telefone'])
+        // const dados = request.only(['nome','login','senha','CNPJ','tipo_empresa','email','telefone'])
+        const body = request.body()
         try {
-            // console.log(dados)
-            // console.log(request.all())
-            const usuario = await User.create(dados)
+            const usuario = await User.create(body)
             return response.created(usuario)
 
         } catch (e) {

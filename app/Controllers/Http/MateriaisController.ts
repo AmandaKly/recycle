@@ -10,6 +10,13 @@ export default class MateriaisController {
         return response.ok(materiais)
     }
 
+    public async findbycategoria({request, response}:HttpContextContract) {
+        const filtro = request.only(['tipo_material'])
+        const materiais = await Material.query().whereLike('tipo_material', '%'+filtro.tipo_material+'%')
+
+        return response.ok(materiais)
+    }
+
     public async store({request, response, params, auth}:HttpContextContract) {
         if (auth.use('api').user != null){
         const body = request.body()
@@ -19,7 +26,6 @@ export default class MateriaisController {
         try {
         
         const materiais = await Material.create(body)
-// colocar isso aqui em pontos
         if (ponto){
             materiais.related('pontos').attach([pontoId])
         }

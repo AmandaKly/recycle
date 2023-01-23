@@ -5,6 +5,7 @@ export default class PontosController {
 
     public async index({ response }:HttpContextContract) {
         const pontos = await Ponto.query().preload('materiais')
+        .orderBy('created_at', 'desc')
 
         return response.ok(pontos)
     }
