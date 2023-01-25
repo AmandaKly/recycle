@@ -31,7 +31,7 @@ function Cadastro() {
             email:email,
             telefone:tel
         }
-        axios.post( 'http://127.0.0.1:3333/api/usuario/',data)//rota que cadastra no server
+        axios.post( 'http://127.0.0.1:3333/api/usuario',data)//rota que cadastra no server
          .then((response) =>{
              console.log('deu certo')
             // return Promise.resolve(response)
