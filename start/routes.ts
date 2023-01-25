@@ -70,6 +70,12 @@ Route.group(() => {
        .where('id', /^[0-9]+$/)
        .as('pontos.show')
 
+        // Essa rota serve para listar os ceps conforme que o usuario digitar.
+    Route.post('/listar/cep', 'PontosController.findbycep')
+
+        // Essa rota serve para listar os pontos conforme que o usuario digitar.
+    Route.post('/listar/pontos', 'PontosController.findbypontos')
+
        // Essa rota serve para deletar um ponto de coleta.
     Route.delete('/:id', 'PontosController.destroy')
        .where('id', /^[0-9]+$/)
@@ -88,12 +94,13 @@ Route.group(() => {
         // ATENÇÃO! TODAS AS ROTAS PARA PONTOS DEVEM INICIAR ANTES COM O PREFIXO /pontos
     }).prefix('/pontos')
 
+
     Route.group(() =>{
         // Essa rota serve para listar todos os materiais.
         Route.get('/', 'MateriaisController.index')
 
-          // Essa rota serve para listar todos os pontos pertencentes a um tipo espefíco de material.
-        Route.post('/listar', 'MateriaisController.findbycategoria')
+        // Essa rota serve para listar os materiais conforme que o usuario digitar.
+        Route.post('/listar/material', 'MateriaisController.findbycategoria')
 
         // Essa rota serve para deletar um material.
         Route.delete('/:id', 'MateriaisController.destroy')
