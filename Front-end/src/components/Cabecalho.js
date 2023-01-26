@@ -22,7 +22,7 @@ function Cabecalho(){
             </header>
             <nav>
 
-                <Link to="/">INICIO</Link>
+                <Link to="/">Inicio</Link>
                 <Link to="/Pontos de coleta">Pontos de coleta</Link>
                 <Link to="/Coleta Seletiva">Coleta seletiva</Link>
              </nav></>

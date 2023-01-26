@@ -28,7 +28,7 @@ export default class MateriaisController {
         
         const materiais = await Material.create(body)
         if (ponto){
-            materiais.related('pontos').attach([pontoId])
+            materiais.related('pontos').attach([pontoId])   
         }
 
         response.status(201)
