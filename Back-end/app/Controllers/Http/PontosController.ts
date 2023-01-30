@@ -22,7 +22,7 @@ export default class PontosController {
     public async findbycep({request, response}:HttpContextContract) {
         const filtro = request.only(['cep'])
         
-        const pontos = await Ponto.query().whereILike('cep', '%' + filtro.cep + '%')
+        const pontos = await Ponto.query().orWhereILike('cep', '%' + filtro.cep + '%')
         return response.ok(pontos)
         
     }

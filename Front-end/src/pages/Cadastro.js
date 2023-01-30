@@ -34,7 +34,7 @@ function Cadastro() {
         axios.post( 'http://127.0.0.1:3333/api/usuario',data)//rota que cadastra no server
          .then((response) =>{
              console.log('deu certo')
-            // return Promise.resolve(response)
+            return Promise.resolve(response)
         })
         //.catch((error)=> {
         //      return Promise.reject(error)
@@ -90,7 +90,7 @@ function Cadastro() {
                             <label for='coleta'>Coleta Seletiva</label>
 
                         </div>
-                        <button type="submit" id="cadastrar" >Cadastrar</button>
+                        <button type="submit" id="cadastrar" > Cadastrar </button>
 
 
                     </div>

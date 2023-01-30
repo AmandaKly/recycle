@@ -13,7 +13,6 @@ export default class MateriaisController {
 
     public async findbycategoria({request, response}:HttpContextContract) {
         const filtro = request.only(['tipo_material'])
-        
         const materiais = await Material.query().whereILike('tipo_material', '%' + filtro.tipo_material + '%')
         return response.ok(materiais)
     }
