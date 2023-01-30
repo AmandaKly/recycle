@@ -36,6 +36,7 @@ function Home() {
                     <div>
                     <label className="cep">
                         <p>Digite o CEP da cidade desejada</p>
+                        
                     <input type="text" placeholder="00000-000" className="cidade" value={cep} onChange={(e) => setcep(e.target.value)} required/>
                     </label>
                     </div>

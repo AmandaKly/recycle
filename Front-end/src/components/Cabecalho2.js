@@ -22,5 +22,6 @@ function Cabecalho2(){
             </header>
             </>
     )
+    
 }
 export default Cabecalho2
