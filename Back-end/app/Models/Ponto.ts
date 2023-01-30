@@ -29,7 +29,7 @@ export default class Ponto extends BaseModel {
   public endereco_ponto: string
 
   @column()
-  public cep: number
+  public cep: string
   
   @column()
   public dia_semana: string
