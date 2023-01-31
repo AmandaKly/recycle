@@ -55,7 +55,7 @@ function Cadastro() {
                         </label>
                         <label>
                             <p>Login</p>
-                            <input type="text" placeholder="Digite aqui seu email" className="cidade" value={login} onChange={(e) => setlogin(e.target.value)} required/>
+                            <input type="text" placeholder="Escolha um login" className="cidade" value={login} onChange={(e) => setlogin(e.target.value)} required/>
                         </label>
                         <label>
                             <p>Senha</p>
@@ -67,15 +67,15 @@ function Cadastro() {
                         </label>
                         <label>
                             <p>CNPJ da empresa</p>
-                        <input type="text" placeholder="Digite aqui seu CNPJ" className="cidade"
+                        <input type="text" placeholder="Somente números" className="cidade"
                         value={cnpj} onChange={(e) => setcnpj(e.target.value)} required/>
                         </label>
                         <label>
                             <p>Telefone</p>
-                            <input type="telefone" placeholder="(84)99999-9999" className="cidade" value={tel} onChange={(e) => settel(e.target.value)} required/>
+                            <input type="tel" placeholder="(84)99999-9999" className="cidade" value={tel} onChange={(e) => settel(e.target.value)} required/>
                         </label>
 
-                        <h2>Qual o tipo de coleta sua empresa recebe?</h2>
+                        <h2>Tipo de coleta da sua empresa</h2>
 
                         <div className="dividir2">
                             <input type="radio" name="ponto" id="empresa"value={ponto} onChange={(e) => setponto(e.target.id)}

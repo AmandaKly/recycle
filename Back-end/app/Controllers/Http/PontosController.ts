@@ -21,17 +21,25 @@ export default class PontosController {
 
     public async findbycep({request, response}:HttpContextContract) {
         const filtro = request.only(['cep'])
-    
-        const pontos = await Ponto.query().orWhereILike('cep', '%' + filtro.cep + '%')
+            const cep = await Ponto.query().where('cep', filtro.cep)
         
-        return response.ok(pontos)
+            return response.ok(cep)
         
     }
 
-    public async findbypontos({request, response}:HttpContextContract) {
+    public async findbynomeponto({request, response}:HttpContextContract) {
         const filtro = request.only(['nome'])
         
         const pontos = await Ponto.query().whereILike('nome', '%' + filtro.nome + '%')
+        
+        return response.ok(pontos)
+    }
+
+    public async findbyendereco({request, response}:HttpContextContract) {
+        const filtro = request.only(['endereco_ponto'])
+        
+        const pontos = await Ponto.query().orWhereILike('endereco_ponto', '%' + filtro.endereco_ponto + '%')
+        
         return response.ok(pontos)
     }
 
@@ -84,7 +92,6 @@ export default class PontosController {
         }
     }
     }
-
 
 }
 

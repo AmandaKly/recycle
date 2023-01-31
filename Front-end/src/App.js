@@ -19,6 +19,7 @@ export default function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/Pontos de coleta" element={<PontosDeColeta/>} />
             <Route path="/Coleta seletiva" element={<ColetaSeletiva />} />
+            <Route path="/Coleta seletiva" element={<ColetaSeletiva />} />
     
     
           </Routes>

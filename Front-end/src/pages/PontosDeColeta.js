@@ -33,7 +33,6 @@ function PontosDeColeta() {
                         </div>
 
 
-
                         <div id="buscarpontos">
                             <div className="descrição">
                                 <h2>Nome da empresa:</h2>
@@ -54,8 +53,6 @@ function PontosDeColeta() {
                         </div>
                     </div>
                 
-
-
 
             </main>
         </>

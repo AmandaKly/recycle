@@ -74,7 +74,10 @@ Route.group(() => {
     Route.post('/listar/cep', 'PontosController.findbycep')
 
         // Essa rota serve para listar os pontos conforme que o usuario digitar.
-    Route.post('/listar/pontos', 'PontosController.findbypontos')
+    Route.post('/listar/nome', 'PontosController.findbynomeponto')
+
+        // Essa rota serve para listar os pontos conforme que o usuario digitar.
+    Route.post('/listar/endereco', 'PontosController.findbyendereco')
 
        // Essa rota serve para deletar um ponto de coleta.
     Route.delete('/:id', 'PontosController.destroy')
