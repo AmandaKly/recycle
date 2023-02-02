@@ -33,11 +33,15 @@ function Cadastro() {
         axios.post( 'http://127.0.0.1:3333/api/usuario',data)//rota que cadastra no server
          .then((response) =>{
              console.log('deu certo')
+             alert('Cadastro realizado com sucesso')
+             window.location='http://localhost:3000/Login'
             return Promise.resolve(response)
         })
-        //.catch((error)=> {
-        //      return Promise.reject(error)
-        //  })
+        .catch((error)=> {
+            alert('Seu cadastro não deu, certo tente novamente')
+            return Promise.reject(error)
+             
+          })
         // console.log(data)
          
     }
@@ -67,12 +71,12 @@ function Cadastro() {
                         </label>
                         <label>
                             <p>CNPJ da empresa</p>
-                        <input type="text" placeholder="Somente números" className="cidade"
+                        <input type="text" placeholder="Somente numeros" className="cidade"
                         value={cnpj} onChange={(e) => setcnpj(e.target.value)} required/>
                         </label>
                         <label>
                             <p>Telefone</p>
-                            <input type="tel" placeholder="(84)99999-9999" className="cidade" value={tel} onChange={(e) => settel(e.target.value)} required/>
+                            <input type="number" placeholder="(84)99999-9999" className="cidade" value={tel} onChange={(e) => settel(e.target.value)} required/>
                         </label>
 
                         <h2>Tipo de coleta da sua empresa</h2>
@@ -80,13 +84,13 @@ function Cadastro() {
                         <div className="dividir2">
                             <input type="radio" name="ponto" id="empresa"value={ponto} onChange={(e) => setponto(e.target.id)}
                              />
-                            <label for='fisico'>Coleta em ponto fisico</label>
+                            <label >Coleta em ponto fisico</label>
                         </div>
                         <div className="dividir2">
                             <input type="radio" name="ponto" id='coleta_seletiva'
                             value={ponto} onChange={(e) => setponto(e.target.id)} 
                             />
-                            <label for='coleta'>Coleta Seletiva</label>
+                            <label >Coleta Seletiva</label>
 
                         </div>
                         <button type="submit" id="cadastrar" > Cadastrar </button>

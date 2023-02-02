@@ -1,3 +1,4 @@
+
 import Cabecalho from "../components/Cabecalho";
 
 
@@ -6,10 +7,10 @@ function PontosDeColeta() {
     return (
         <>
             <Cabecalho />
-            <mostrar />
+            
             <main>
             <div id="pontos">
-                        <h1 classname='header'>Pontos de coleta</h1>
+                        <h1 className='header'>Pontos de coleta</h1>
                         </div>
                 <div id="pontosColeta">
                     
