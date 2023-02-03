@@ -28,7 +28,7 @@ export default class User extends BaseModel {
   public senha: string
   
   @column()
-  public CNPJ: string
+  public CNPJ: number
 
   @column()
   public tipo_empresa: 'empresa'| 'coleta_seletiva'

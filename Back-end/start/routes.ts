@@ -120,16 +120,3 @@ Route.group(() => {
 
 }).prefix('/api')
 
-
-
-
-// Route.group(() =>{
-    
-// }).prefix('/postagem')
-//     .middleware('auth')
-//     .where('id', /^[0-9]+$/)
-//     .where('idComment', /^[0-9]+$/)
-
-    // Route.get('/:id', 'UsersController.show')
-    //     .where('id', /^[0-9]+$/)
-    //     .as('usuarios.show')
