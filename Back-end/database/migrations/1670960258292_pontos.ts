@@ -14,10 +14,10 @@ export default class extends BaseSchema {
       .onDelete('CASCADE')
       .onUpdate('CASCADE')
       table.string('nome',150).notNullable()
-      table.integer('cep', 50).notNullable()
+      table.bigint('cep').notNullable()
       table.string('endereco_ponto', 500).notNullable()
       table.string('dia_semana', 100)
-      table.string('horario', 40)
+      table.string('horario')
       table.string('descricao', 400)
 
       

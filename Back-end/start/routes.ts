@@ -46,6 +46,10 @@ Route.group(() => {
     Route.post('/:id/pontos', 'PontosController.store')
         .where('id', /^[0-9]+$/)
         .as('pontos.store').middleware('auth')
+
+    Route.get('/tipoEmpresa', 'UsersController.getTipoEmpresa')
+        .where('id', /^[0-9]+$/)
+        .as('tipoEmpresa.index').middleware('auth')
         
         // ATENÇÃO! TODAS AS ROTAS PARA USUÁRIO DEVEM INICIAR ANTES COM O PREFIXO /usuario
     }).prefix('/usuario')

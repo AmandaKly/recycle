@@ -10,9 +10,9 @@ export default class Users extends BaseSchema {
       table.string('nome',150).notNullable()
       table.string('login',60).notNullable().unique()
       table.string('senha',1000).notNullable()
-      table.integer('CNPJ', 14).notNullable().unique()
+      table.bigint('CNPJ').notNullable().unique()
       table.string('email', 1000).notNullable()
-      table.integer('telefone', 50).notNullable()
+      table.bigint('telefone').notNullable()
 
       
 
