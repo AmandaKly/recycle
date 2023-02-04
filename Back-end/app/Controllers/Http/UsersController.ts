@@ -29,6 +29,14 @@ export default class UsersController {
         } 
     }
 
+    async getTipoEmpresa({response, auth}:HttpContextContract) {
+        if (auth.use('api').user != null){
+            const id = auth.use('api').user?.id
+            const usuario = await User.query().from('users').select('tipo_empresa').where({id})
+            return response.ok(usuario)
+        }
+    }
+
 
     async destroy ({ params, response, auth }: HttpContextContract) {
         if (auth.use('api').user != null)
