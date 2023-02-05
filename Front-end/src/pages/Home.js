@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Cabecalho2 from "../components/Cabecalho2";
 import React from 'react'
 import axios from "axios";
+import img from '../imagens/imagemdohome.png'
 
 
 function Home() {
@@ -30,13 +31,16 @@ function Home() {
 
     return (
         <form onSubmit={Home}>
-        <div >
+        
             <Cabecalho2/>
             <main>
-                <div >
+            <div id="inicio">
+                <div  >
                     <h3 id="apresentacao" >
-                        Busque pelos pontos de coleta ou informações sobre a coleta seletiva mais próximas de você!
+                    Seja bem-vindo ao nosso site.
+Aqui você encontra os Pontos de Coleta mais próximos, contribuindo para o aumento da preservação dos recursos naturais e melhorando a qualidade de vida no planeta.
                     </h3>
+                    <img src={img} alt="Logo" className="imghome" />
                 </div>
                 <div id="divBusca">
                     <h1>Pesquisar</h1>
@@ -47,15 +51,12 @@ function Home() {
                     <input type="text" placeholder="00000-000" className="cidade" value={cep} onChange={(e) => setcep(e.target.value)} required/>
                     </label>
                     </div>
-                     	
-                    
-
-                    <button type="submit" id="buscar">Buscar</button>
+                     	<button type="submit" id="buscar">Buscar</button>
                     </div>
-                   
+                    </div>
 
                     </main>
-                </div>
+                
             </form>
     )
 }

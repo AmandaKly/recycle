@@ -83,30 +83,8 @@ img {
 }
 
 
-#divBusca{
-  
-  background-color:#FAFFF3;
-  border:solid 1px;
-  border-radius:15px;
-  width:25rem;
-  margin: 1rem auto;
-  color: #697C49;
-  max-width: 32rem;
-  height: 15rem;
-  font-family: 'Amaranth', sans-serif;
 
 
-}
-#apresentacao{
-  background-color: rgb(215, 227, 216);
-  border: solid 0.1rem rgb(37, 81, 76);
-  border-radius: 0.5rem;
-  color: rgb(29, 98, 57);
-  height: 2rem;
-  width: 70rem;
-  margin: 0 auto;
-  margin-top: 4rem;
-}
 .cep p{
   margin:  auto;
 }
@@ -347,4 +325,36 @@ div#pontos h1{
 }
 #coletaseletiva th{
   margin-top: 10rem;
+}
+/* home */
+#apresentacao{
+  color: rgb(29, 98, 57);
+ height: 5rem;
+  width: 30rem;
+  margin:0 auto;
+  
+  text-align: center;
+}
+#inicio{
+  display: flex;
+  margin: 2rem 10rem
+}
+.imghome{
+  width: 30rem;
+  height: 20rem;
+ 
+}
+#divBusca{
+  
+  background-color:#FAFFF3;
+  border:solid 1px;
+  border-radius:15px;
+  width:25rem;
+  margin: auto 2rem;
+  color: #697C49;
+  max-width: 32rem;
+  height: 15rem;
+  font-family: 'Amaranth', sans-serif;
+
+
 }
