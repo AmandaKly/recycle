@@ -13,7 +13,7 @@ export default class extends BaseSchema {
       .references('users.id')
       .onDelete('CASCADE')
       .onUpdate('CASCADE')
-      table.string('nome',150).notNullable()
+      table.string('nome',150)
       table.bigint('cep').notNullable()
       table.string('endereco_ponto', 500).notNullable()
       table.string('dia_semana', 100)
