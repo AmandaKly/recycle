@@ -21,7 +21,9 @@ export default class PontosController {
 
     public async findbycep({request, response}:HttpContextContract) {
         const filtro = request.only(['cep'])
-            const cep = await Ponto.query().where('cep', filtro.cep)
+        const cep = await Ponto.query().where('cep', filtro.cep)
+        console.log(filtro)
+        console.log(cep)
         
             return response.ok(cep)
         

@@ -12,17 +12,13 @@ class PontosDeColeta extends Component {
     }
  
     async componentDidMount(){
-        
-        
-            const response = await api.get('/pontos')
+        const response = await api.get('/pontos',data)
         this.setState({cep:response.data})
-        
     }
     
     render(){
         const {cep}= this.state;
-        
-        
+
     return (
         <>
             <Cabecalho />
