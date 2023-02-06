@@ -7,7 +7,7 @@ import InputMask from 'react-input-mask';
 
 function Home() {
     const [cep,setcep]=React.useState('')
-
+    console.log(cep)
     const Home = (e) =>{
         e.preventDefault()
         const data = {
