@@ -28,7 +28,7 @@ export default class User extends BaseModel {
   public senha: string
   
   @column()
-  public CNPJ: number
+  public CNPJ: string
 
   @column()
   public tipo_empresa: 'empresa'| 'coleta_seletiva'
@@ -37,7 +37,7 @@ export default class User extends BaseModel {
   public email: string
 
   @column()
-  public telefone: number
+  public telefone: string
   
 
   @computed({ serializeAs: null })

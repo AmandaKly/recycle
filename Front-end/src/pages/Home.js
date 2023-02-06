@@ -3,7 +3,7 @@ import Cabecalho2 from "../components/Cabecalho2";
 import React from 'react'
 import axios from "axios";
 import img from '../imagens/imagemdohome.png'
-
+import InputMask from 'react-input-mask';
 
 function Home() {
     const [cep,setcep]=React.useState('')
@@ -48,7 +48,8 @@ Aqui você encontra os Pontos de Coleta mais próximos, contribuindo para o aume
                     <label className="cep">
                         <p>Digite o CEP da cidade desejada .</p>
                         
-                    <input type="text" placeholder="00000-000" className="cidade" value={cep} onChange={(e) => setcep(e.target.value)} required/>
+                        <InputMask 
+                                mask="99999-999" type="text" placeholder="00000-000" className="cidade" value={cep} onChange={(e) => setcep(e.target.value)} required/>
                     </label>
                     </div>
                      	<button type="submit" id="buscar">Buscar</button>
