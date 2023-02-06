@@ -46,7 +46,7 @@ Aqui você encontra os Pontos de Coleta mais próximos, contribuindo para o aume
                     <h1>Pesquisar</h1>
                     <div>
                     <label className="cep">
-                        <p>Digite o CEP da cidade desejada .</p>
+                        <p>Digite o CEP da cidade desejada.</p>
                         
                     <input type="text" placeholder="00000-000" className="cidade" value={cep} onChange={(e) => setcep(e.target.value)} required/>
                     </label>
