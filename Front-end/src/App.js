@@ -7,6 +7,7 @@ import Login from "./pages/Login";
 import PontosDeColeta from "./pages/PontosDeColeta";
 import ColetaSeletiva from "./pages/ColetaSeletiva";
 import PontosDoUsuario from "./pages/PontosDoUsuario";
+import CadastrarPontos from "./pages/cadastrarpontos";
 
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
             <Route path="/Pontos de coleta" element={<PontosDeColeta/>} />
             <Route path="/Coleta seletiva" element={<ColetaSeletiva />} />
             <Route path="/Ponto do usuario" element={<PontosDoUsuario/>} />
+            <Route path="/CadastrarPontos" element={<CadastrarPontos/>} />
     
     
           </Routes>

@@ -1,6 +1,7 @@
 import Cabecalho from "../components/Cabecalho";
 import axios from "axios";
-import React from 'react'
+import React from 'react';
+import imgpaglogin from "../imagens/imgpaglogin.png"
 
 
 
@@ -38,6 +39,12 @@ function Login() {
         <Cabecalho/>
             <main>
             <div className="image">
+            <div>
+            <h3 id="Fraselogin" >
+                    Faça login para cadastrar seus pontos de coleta ou as ruas que passa a coleta celetiva.
+                    </h3>
+                <img src={imgpaglogin} alt="imgpaglogin" className="imgpaglogin" />
+            </div>
             <div id="buscarlogin">
 
                  <form onSubmit={Login}>
@@ -48,11 +55,12 @@ function Login() {
 
                  <label>
                      <p>Senha</p>
-                 <input type="text" placeholder="  *********" className="cidade" value={password} onChange={(e) => setpassword(e.target.value)} required/>
+                 <input type="password" placeholder="  *********" className="cidade" value={password} onChange={(e) => setpassword(e.target.value)} required/>
                  </label>
                  <button type="submit" className="submitformbutton">Entrar</button>
                 </form>
             </div>
+            
              </div>
          </main>
          </>
