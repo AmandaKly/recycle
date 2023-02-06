@@ -8,7 +8,6 @@ function CadastrarPontos() {
     const [endereco_ponto,setendereco_ponto]=React.useState('')
     const [material,setmaterial]=React.useState('')
     const [descricao,setdescricao]=React.useState('')
-    const [cep,setcep]=React.useState('')
     
    
 
@@ -19,8 +18,7 @@ function CadastrarPontos() {
             nome:nome,
             endereco_ponto:endereco_ponto,
             material:material,
-            descricao:descricao,
-            cep:cep
+            descricao:descricao
         }
         axios.post( 'http://127.0.0.1:3333/api/usuario/:id/pontos',data)//rota que cadastra no server
          .then((response) =>{
@@ -54,8 +52,6 @@ function CadastrarPontos() {
                         <div className="cadastrar">
                             <label>Nome da empresa:</label>
                             <input type="text" placeholder="recyclarn"  value={nome} onChange={(e) => setnome(e.target.value)}/>
-                            <label>CEP:</label>
-                            <input type="text" placeholder="59360-000"  value={cep} onChange={(e) => setcep(e.target.value)}/>
                             <label>Endereço:</label>
                             <textarea cols="30" rows="5" placeholder="Rua: Maestro nem luiz 174        Bairro:Radir pereira    Currais novos/rn " value={endereco_ponto} onChange={(e) => setendereco_ponto(e.target.value)}></textarea>
                             <label>Tipo de material que recebe:</label>
