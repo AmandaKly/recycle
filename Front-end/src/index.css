@@ -404,8 +404,8 @@ div#pontos h1{
   display: block;
   text-align: start;
 }
-.cadastrar  :nth-child(4){
-  height: 7rem;
+.cadastrar  :nth-child(6){
+  height: 6rem;
   width: 13rem;
   margin: 0 1rem;
   margin-bottom: 1rem;
@@ -444,6 +444,10 @@ div#pontos h1{
   width: 13rem;
   height: 1.5rem;
 }
+.cadastrar  :nth-child(4){
+  width: 13rem;
+  height: 1.5rem;
+}
 textarea{  
   background-color: #E1FAC8;
   margin: 0 auto;
@@ -456,7 +460,7 @@ textarea{
   width: 25rem;
   margin-left: 3rem;
 }
-.cadastrar  :nth-child(6){
+.cadastrar  :nth-child(8){
   width: 13rem;
   height: 1.5rem;
   margin-bottom: 1rem;

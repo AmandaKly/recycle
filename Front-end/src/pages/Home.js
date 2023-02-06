@@ -15,7 +15,7 @@ function Home() {
         }
         axios.post( 'http://127.0.0.1:3333/api/pontos/listar/cep',data)//rota que cadastra no server
          .then((response) =>{
-             console.log('deu certo')
+             console.log(response)
              alert(`Realmente quer pesquisar os pontos do cep ${cep} `)
              window.location="http://localhost:3000/Pontos de coleta"
             return Promise.resolve(response)
