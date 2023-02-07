@@ -1,0 +1,25 @@
+.loginsite {
+    display: flex;
+    width: 2rem;
+    margin: 0.8rem -0.5rem;
+    padding-left: 35rem;
+    
+  }
+  header {
+    text-align: center;
+    display: flex;
+    text-decoration: none;
+    margin: 0 9rem;
+  }
+  nav {
+    display: flex;
+    gap: 5.5rem;
+    border: solid  0.1rem  rgb(51, 255, 0);
+    width: 40rem;
+    margin: 0 auto;
+    background-color: #FAFFF3;
+    color:#697C49 ;
+    font-size:1.6rem ;
+    border-radius: 0.2rem;
+    
+  }

@@ -4,8 +4,8 @@ import React from 'react'
 import axios from "axios";
 import img from '../imagens/imagemdohome.png'
 import InputMask from 'react-input-mask';
-
-function Home() {
+import '../css/home.css'
+export function Home() {
     const [cep,setcep]=React.useState('')
 
     const Home = (e) =>{
@@ -16,7 +16,6 @@ function Home() {
         axios.post( 'http://127.0.0.1:3333/api/pontos/listar/cep',data)//rota que cadastra no server
          .then((response) =>{
              console.log(response)
-             alert(`Realmente quer pesquisar os pontos do cep ${cep} `)
              window.location="http://localhost:3000/Pontos de coleta"
             return Promise.resolve(response)
         })

@@ -1,1 +1,93 @@
-.h1{color: blue;}
+div#pontosColeta{
+    display: flex;
+    margin: 0 6rem;
+    flex-wrap: wrap;
+    
+    
+  }
+  #buscarpontos{
+    background-color:#FAFFF3;
+    border:solid 1px;
+    border-radius:15px;
+    width:32rem;
+    margin-left: 1rem;
+    color: #697C49;
+    max-width: 40rem;
+    font-family: 'Amaranth', sans-serif;
+    display:flex;
+    margin-top: 1rem;
+  }
+  .descrição{
+   padding: 2rem 0 0 0;
+  }
+  
+  div.descrição p{
+    background-color: #E1FAC8;
+    color:#697C49;
+    border: solid 0.1rem #697C49;
+    border-radius: 0.5rem;
+    width: 10rem;
+    margin: 0.4rem ;
+    
+  }
+  div.descrição h2{
+    font-size: 1rem;
+    color:#697C49;
+    margin: 0.1rem;
+    text-align: center;
+  }
+  div.descrição select{
+    font-size: 1rem;
+    color:#697C49;
+    margin: 0.4rem;
+    background-color: #E1FAC8;
+    color:#697C49;
+    border: solid 0.1rem #697C49;
+    border-radius: 0.5rem;
+    width: 10rem;
+    text-align: center;
+    height: 2rem;
+    font-family: 'Amaranth', sans-serif;
+  }
+  div.Observacao{
+    background-color: #cfeec4;
+    color:#697C49;
+    border: solid 0.1rem #697C49;
+    border-radius: 0.5rem;
+    width: 60vw;
+    height: 28vh;
+    text-align: justify;
+    margin: 1rem;
+  }
+  div.Observacao h2{
+    margin: 1rem;
+  }
+  div.Observacao p{
+    margin: 1rem;
+    background-color: #E1FAC8;
+    color:#697C49;
+    border: solid 0.1rem #697C49;
+    border-radius: 0.5rem;
+    height: 15vh;
+    padding: 0.3rem 0.5rem;
+  }
+  div#pontos h1{
+    background-color: #E1FAC8;
+    color:#697C49;
+    border: solid 0.1rem #697C49;
+    border-radius: 0.5rem;
+    width: 30rem;
+    margin: 1rem auto;
+  }
+  
+  .c-loader {
+    border: 6px solid #e5e5e5;
+    border-top-color: #51d4db;
+    height: 50px;
+    width: 50px;
+    display: none;
+  }
+  
+  #coletaseletiva th{
+    margin-top: 10rem;
+  }

@@ -1,4 +1,6 @@
 import Cabecalho from "../components/Cabecalho"
+import '../css/ColetaSeletiva.css';
+
 
 function ColetaSeletiva() {
     return (
@@ -22,12 +24,12 @@ function ColetaSeletiva() {
                                     <tr>
                                         <td>Segunda</td>
                                         <td className="bairros">Manoel Salustino</td>
-                                        <td>10:00</td>
+                                        <td>9:00</td>
                                     </tr>
                                     <tr>
                                         <td>Terça</td>
                                         <td className="bairros">Silvio Bezerra e Parque das Pedras</td>
-                                        <td>10:00</td>
+                                        <td>9:30</td>
                                     </tr>
                                     <tr>
                                         <td>Quarta</td>
@@ -53,8 +55,8 @@ function ColetaSeletiva() {
                                 <div className="contato">
                                 <h2>Contato:</h2>
                                     <div className="borda">
-                                    <p><strong >Telefone:</strong>(xx)22222-2222</p>
-                                    <p><strong>Email:</strong>_abcd@_gamil.com</p>
+                                    <p><strong >Telefone:</strong>(84)99365782</p>
+                                    <p><strong>Email:</strong>curraisrecycla@gmail.com</p>
                                     </div>
                                 </div>
                                 <div  className="observacoescoleta">

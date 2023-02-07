@@ -1,0 +1,48 @@
+#buscarlogin p{
+    margin: 0.5rem auto;
+    margin-bottom: 0.2rem;
+  }
+  #buscarlogin label{
+    display: block;
+  }
+  .imgpaglogin{
+    width: 30rem;
+    height: 20rem;
+    margin-left:  8rem;
+  }
+  .image{
+    margin-top: 2rem;
+    display: flex;
+    width: 65rem;
+    height: 25rem;
+    
+  }
+  #Fraselogin{
+    color: rgb(29, 98, 57);
+   height: 5rem;
+    width: 20rem;
+    margin:0 auto;
+    text-align: center;
+    margin-left: 15rem;
+  }
+  #buscarlogin input{
+    width: 12rem;
+  }
+  #buscarlogin{
+  
+    background-color:#FAFFF3;
+    border:solid 1px;
+    border-radius:15px;
+    width:32rem;
+    margin: 4rem auto;
+    color: #697C49;
+    max-width: 25rem;
+    font-family: 'Amaranth', sans-serif;
+  }
+  input {
+  
+    background-color: #E1FAC8;
+    margin: 0 auto;
+    border: solid 0.1rem rgb(37, 81, 76);
+    border-radius: 0.5rem;
+  } 

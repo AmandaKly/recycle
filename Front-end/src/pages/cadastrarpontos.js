@@ -2,6 +2,7 @@ import Cabecalho2 from "../components/Cabecalho2";
 import React from 'react'
 import imgemcadastropontos from '../imagens/imgcadastropontos.png'
 import axios from "axios";
+import '../css/cadastrarpontos.css'
 
 function CadastrarPontos() {
     const [nome,setnome]=React.useState('')
@@ -22,7 +23,7 @@ function CadastrarPontos() {
             descricao:descricao,
             cep:cep
         }
-        axios.post( 'http://127.0.0.1:3333/api/usuario/:id/pontos',data)//rota que cadastra no server
+        axios.post( 'http://127.0.0.1:3333/api/usuario/1/pontos',data)//rota que cadastra no server
          .then((response) =>{
              console.log('deu certo')
              alert('Cadastro realizado com sucesso')

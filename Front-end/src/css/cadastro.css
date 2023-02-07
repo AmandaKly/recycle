@@ -1,0 +1,21 @@
+#Buscacadastrar{
+    background-color:#FAFFF3;
+    border:solid 1px;
+    border-radius:15px;
+    width:32rem;
+    margin: 1rem auto;
+    color: #697C49;
+    max-width: 32rem;
+    height: 50rem;
+    font-family: 'Amaranth', sans-serif;
+  }
+  #Buscacadastrar p{
+    margin: 0.5rem auto;
+    margin-bottom: 0.2rem;
+  }input {
+  
+    background-color: #E1FAC8;
+    margin: 0 auto;
+    border: solid 0.1rem rgb(37, 81, 76);
+    border-radius: 0.5rem;
+  } 

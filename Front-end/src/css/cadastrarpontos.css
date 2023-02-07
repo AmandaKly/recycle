@@ -1,0 +1,105 @@
+#cadastrarpontos{
+    background-color:#FAFFF3;
+    border:solid 1px;
+    border-radius:15px;
+    width:40rem;
+    margin-left: 1rem;
+    color: rgb(105, 124, 73);
+    max-width: 80rem;
+    font-family: 'Amaranth', sans-serif;
+    display:block;
+    height: 78vh;
+    margin-bottom: 1rem;
+  }
+  .formpontos{
+    display: flex;
+    background-color:#cfeec4;
+    border:solid 1px;
+    border-radius:15px;
+    margin: 2rem 2rem;
+  }
+  .cadastrar label{
+    font-size: 1rem;
+    color:#697C49;
+   margin: 0.3rem 1rem;
+    display: block;
+    text-align: start;
+  }
+  .cadastrar  :nth-child(6){
+    height: 6rem;
+    width: 13rem;
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+  
+  }
+  .cadastrarobs textarea{
+    width: 17rem;
+    height:8rem;
+    margin: 0 1rem;
+  }
+  .cadastrar select{
+    background-color:#FAFFF3;
+    border:solid 1px;
+    border-radius:15px;
+    font-size: 1rem;
+      color: #697C49;
+      margin: 0.4rem;
+      background-color: #E1FAC8;
+      color: #697C49;
+      border: solid 0.1rem #697C49;
+      border-radius: 0.5rem;
+      width: 10rem;
+      text-align: center;
+      height: 2rem;
+      font-family: 'Amaranth', sans-serif;
+  }
+  #cadastrarpontos button{
+    margin: 0 auto;
+  }
+  .cadastrarobs{
+    text-align: left;
+    margin: 2rem auto;
+    
+  }
+  .cadastrar  :nth-child(2){
+    width: 13rem;
+    height: 1.5rem;
+  }
+  .cadastrar  :nth-child(4){
+    width: 13rem;
+    height: 1.5rem;
+  }
+  textarea{  
+    background-color: #E1FAC8;
+    margin: 0 auto;
+    border: solid 0.1rem rgb(37, 81, 76);
+    border-radius: 0.5rem;}
+   #cadastropontos{
+     display: flex;
+   }
+   #cadastropontos img{
+    width: 25rem;
+    margin-left: 3rem;
+  }
+  .cadastrar  :nth-child(8){
+    width: 13rem;
+    height: 1.5rem;
+    margin-bottom: 1rem;
+  }#cadastrarponto{
+    background-color: #E1FAC8;
+    color:#697C49;
+    border: solid 0.1rem #697C49;
+    border-radius: 0.5rem;
+    width: 12rem;
+    height: 2rem;
+    margin: 1rem;
+    font-family: 'Amaranth', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }input {
+  
+    background-color: #E1FAC8;
+    margin: 0 auto;
+    border: solid 0.1rem rgb(37, 81, 76);
+    border-radius: 0.5rem;
+  } 

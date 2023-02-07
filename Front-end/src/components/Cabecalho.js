@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Logo from '../imagens/logo2.png'
 import Imglogin from '../imagens/login.png'
 import RecicleRN from '../imagens/RecycleRN.png'
+import '../css/cabecalho.css'
 
 function Cabecalho(){
     return(

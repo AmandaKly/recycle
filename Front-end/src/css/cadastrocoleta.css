@@ -1,0 +1,20 @@
+table input{
+    color: #697C49;
+    border:0;
+    border-radius: 0;
+    font-family: 'Amaranth', sans-serif;
+} 
+textarea{
+    background: #E1FAC8;
+    border: 1px solid #697C49;
+    border-radius: 8px;
+    width: 17rem;
+    margin-left: 1rem;
+    height: 6rem;
+}
+.detalhes{ 
+    gap:4rem;
+}
+button{
+    margin: 3rem;
+}

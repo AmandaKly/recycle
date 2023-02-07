@@ -1,6 +1,6 @@
 import Cabecalho from "../components/Cabecalho";
 import React from 'react'
-
+import '../css/cadastro.css'
 import axios from "axios";
 
 

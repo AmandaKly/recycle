@@ -1,6 +1,8 @@
 import api from "../services/api";
 import Cabecalho from "../components/Cabecalho";
 import { Component } from "react";
+import '../css/pontos.css'
+
 
 
 
@@ -10,14 +12,17 @@ class PontosDeColeta extends Component {
     state={
         cep:[],
     }
+    
  
     async componentDidMount(){
-        const response = await api.get('/pontos',data)
+        const response = await api.get('/pontos')
         this.setState({cep:response.data})
+        
     }
     
     render(){
         const {cep}= this.state;
+
 
     return (
         <>
@@ -37,11 +42,7 @@ class PontosDeColeta extends Component {
                             
                             <div className="descrição" >
                                 <h2>Nome da empresa:</h2><p >{cep.nome }</p><h2>Endereço:</h2><p >{cep.endereco_ponto} </p>
-                                <h2>Tipo de material que recebe:</h2>
-                                <select>
-                                    <option value="" >{cep.material}</option>
-                                    <option value="" >Plastico</option>
-                                </select>
+                                
                         </div>
                         <div className="Observacao">
                             <h2>Observações:</h2>

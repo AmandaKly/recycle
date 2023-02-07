@@ -1,0 +1,91 @@
+#tabela{
+    background-color: #CFEEC4;
+    border:#000 solid 1px;
+      border-radius:15px;
+      width: 40rem;
+      height: 15rem;
+      margin: 0 auto;
+  }
+  #tabela  tr, td, th{
+    background-color: #E1FAC8;
+    font-family: 'Amaranth', sans-serif;
+      border-radius:10px;
+          width:8rem;
+          padding:0px;
+          font-size:20px;
+      }
+    #coletaseletiva{
+      
+      width:50rem;
+      margin: 1rem auto;
+      color: #697C49;
+      max-width: 100rem;
+      font-family: 'Amaranth', sans-serif;
+      font-size: 2rem;
+    }
+    #paginacoleta{
+      background-color:#FAFFF3;
+      border:solid 1px;
+      border-radius:15px;
+      width: 60rem;
+      margin: 1rem auto;
+    }
+    .bairros{
+      width:20rem;
+    }
+    table{
+      margin: 1rem auto;
+    }
+    #coletaseletiva .informacoes{
+      display: flex;
+      
+    }
+    .detalhes{
+      margin: 1rem;
+      display: flex;
+      gap: 15rem;
+    }
+    .detalhes h2{
+      font-size: 1.5rem;
+      text-align: start;
+      margin: 0;
+    }
+    .detalhes p{
+      font-size: 0.8rem;
+      
+    }
+    .contato {
+    background: #CFEEC4;
+    border: 1px solid #697C49;
+    border-radius: 8px;
+    padding: 0.2rem 1rem 0 1rem;
+    width: 20rem;
+    height: 7rem;
+    }
+  .borda{
+    background: #E1FAC8;
+      border: 1px solid #697C49;
+     border-radius: 8px;
+     width: 13rem;
+     margin-left: 1rem;
+  }
+  .borda2{
+    background: #E1FAC8;
+      border: 1px solid #697C49;
+     border-radius: 8px;
+     width: 15rem;
+     margin-left: 1rem;
+  }
+  .observacoescoleta{
+    
+      background: #CFEEC4;
+      border: 1px solid #697C49;
+      border-radius: 8px;
+      padding: 0.2rem 1rem 0 1rem;
+      width: 30rem;
+      height: 10rem;
+      
+  }
+  strong{
+    color:  black;
+  }
