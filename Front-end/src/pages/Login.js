@@ -1,5 +1,4 @@
 import Cabecalho from "../components/Cabecalho";
-import axios from "axios";
 import React from 'react';
 import imgpaglogin from "../imagens/imgpaglogin.png"
 import '../css/login.css'
@@ -21,8 +20,11 @@ function Login() {
             senha:password
             
         }
+        
         api.post( '/auth/login',data)//rota que cadastra no server
+        
          .then((response) =>{
+            console.log()
              alert('Login realizado com sucesso')
              window.location='http://localhost:3000/Ponto%20do%20usuario'
             return Promise.resolve(response)

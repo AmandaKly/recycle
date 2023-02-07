@@ -55,7 +55,6 @@ export default class UsersController {
      * @param param0 
      */
     async store ({ request, response,}: HttpContextContract) {
-        // const dados = request.only(['nome','login','senha','CNPJ','tipo_empresa','email','telefone'])
         const body = request.body()
         try {
             const usuario = await User.create(body)

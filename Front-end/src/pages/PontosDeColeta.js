@@ -5,8 +5,6 @@ import '../css/pontos.css'
 
 
 
-
-
 class PontosDeColeta extends Component {
 
     state={
@@ -15,15 +13,17 @@ class PontosDeColeta extends Component {
     
  
     async componentDidMount(){
+        
         const response = await api.get('/pontos')
         this.setState({cep:response.data})
+        
         
     }
     
     render(){
-        const {cep}= this.state;
+        const {cep} = this.state;
 
-
+        
     return (
         <>
             <Cabecalho />

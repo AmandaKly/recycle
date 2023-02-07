@@ -1,4 +1,3 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Cabecalho2 from "../components/Cabecalho2";
 import React from 'react'
 import axios from "axios";
@@ -7,7 +6,7 @@ import InputMask from 'react-input-mask';
 import '../css/home.css'
 export function Home() {
     const [cep,setcep]=React.useState('')
-
+    
     const Home = (e) =>{
         e.preventDefault()
         const data = {

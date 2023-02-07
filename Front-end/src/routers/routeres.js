@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route,Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import '../App.css';
 import Home from "../pages/Home";
 import Cadastro from "../pages/Cadastro";
@@ -6,9 +6,10 @@ import Login from "../pages/Login";
 import PontosDeColeta from "../pages/PontosDeColeta";
 import ColetaSeletiva from "../pages/ColetaSeletiva";
 import PontosDoUsuario from "../pages/PontosDoUsuario";
-import CadastrarPontos from "../pages/cadastrarpontos";
-import Cadastrocoleta from "../pages/cadastrocoleta";
+
+import Cadastrocoleta from "../pages/CadastroColeta";
 import Coletausuario from "../pages/Coletausuario";
+import CadastrarPontos from "../pages/CadastrarPontos";
 
 
  function Routeres() {

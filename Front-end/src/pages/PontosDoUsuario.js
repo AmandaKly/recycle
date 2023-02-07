@@ -1,9 +1,6 @@
-
-import { useState } from "react";
-import Cabecalho2 from "../components/Cabecalho2";
+import Cabecalho3 from "../components/Cabecalho3";
 import {  Link } from "react-router-dom";
 import api from "../services/api";
-import Cabecalho from "../components/Cabecalho";
 import { Component } from "react";
 import '../css/pontos.css'
 
@@ -28,7 +25,7 @@ class PontosDousuario extends Component {
 
     return (
         <>
-            <Cabecalho />
+            <Cabecalho3 />
             
             <main>
                 

@@ -1,5 +1,6 @@
 import Cabecalho from "../components/Cabecalho";
 import React from 'react'
+import InputMask from 'react-input-mask';
 import '../css/cadastro.css'
 import axios from "axios";
 
@@ -71,12 +72,12 @@ function Cadastro() {
                         </label>
                         <label>
                             <p>CNPJ da empresa</p>
-                        <input type="text" placeholder="Somente numeros" className="cidade"
+                        <InputMask mask="99.999.999/0001-99" type="text" placeholder="Somente numeros" className="cidade"
                         value={cnpj} onChange={(e) => setcnpj(e.target.value)} required/>
                         </label>
                         <label>
                             <p>Telefone</p>
-                            <input type="number" placeholder="(84)99999-9999" className="cidade" value={tel} onChange={(e) => settel(e.target.value)} required/>
+                            <InputMask mask="(99) 99999-9999" type="text" placeholder="(84)99999-9999" className="cidade" value={tel} onChange={(e) => settel(e.target.value)} required/>
                         </label>
 
                         <h2>Tipo de coleta da sua empresa</h2>
