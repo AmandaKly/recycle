@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import Cabecalho2 from "../components/Cabecalho2";
+import Cabecalho3 from "../components/Cabecalho3";
 import {  Link } from "react-router-dom";
 
 
@@ -9,7 +9,7 @@ function PontosDoUsuario() {
     
     return (
         <>
-            <Cabecalho2 />
+            <Cabecalho3 />
             
             <main>
             <div id="pontos">

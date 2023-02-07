@@ -2,9 +2,6 @@ import api from "../services/api";
 import Cabecalho from "../components/Cabecalho";
 import { Component } from "react";
 
-
-
-
 class PontosDeColeta extends Component {
 
     state={
@@ -12,12 +9,12 @@ class PontosDeColeta extends Component {
     }
  
     async componentDidMount(){
-        const response = await api.get('/pontos',data)
+        const response = await api.get('/pontos')
         this.setState({cep:response.data})
     }
     
     render(){
-        const {cep}= this.state;
+        const {cep} = this.state;
 
     return (
         <>
