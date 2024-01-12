@@ -10,13 +10,3 @@ para Frames de tela: <a href="https://www.figma.com/proto/UjQr4m5nRoLRIG6fY2QfQS
 ### comando para executar o frontend:
 ``` npm start ``` 
 
-### Fazendo push para o git:
-``` cd recyclern ```
-
-``` git status ```
-
-``` git add . ```
-
-``` git commit -m "Comentário" ```
-
-``` git push ```
